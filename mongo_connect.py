@@ -25,8 +25,11 @@ for db in dbs:
 
 db = connection.training
 
-print(db)
+#print(db)
 
+# Select the 'python' collection
+
+collection = db.python
 
 
 
