@@ -32,6 +32,21 @@ db = connection.training
 collection = db.python
 
 
+#Create a sample document
+doc = {
+    "lab": "Accessing mongo using Python",
+    "subject": "No SQL Databases"
+}
+doc2 = [
+    {"database":"a database contains collections"},
+    {"collection":"a collection stores the documents"},
+    {"document":"a document contains the data in the form or key value pairs."},
+
+]
+
+print("Inserting data into collection")
+db.collection.insert_one(doc)
+
 
 
 print("Closing the connection to the mongo db")
