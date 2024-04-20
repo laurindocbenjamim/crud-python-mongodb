@@ -45,9 +45,17 @@ doc2 = [
 ]
 
 print("Inserting data into collection")
-db.collection.insert_one(doc)
+#db.collection.insert_one(doc)
 
+db.collection.insert_many(doc2)
 
+# Query for all document in 'training' database and collection
+docs = db.collection.find()
+
+print("Printing the documents in the collection")
+
+for document in  docs: 
+    print(document)
 
 print("Closing the connection to the mongo db")
 
